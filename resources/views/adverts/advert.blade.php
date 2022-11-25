@@ -16,7 +16,7 @@
         <div class="bg-white mt-6 px-4 md:px-6 lg:px-12 py-12">
 
             <button
-                class="px-3 text-center md:px-6 py-2 font-semibold mb-4 text-white bg-sky-500 border-b-4 border-gray-800 rounded hover:border-gray-600">
+                class="px-3 text-center md:px-6 py-2 font-semibold mb-4 text-white bg-sky-600 border-b-4 border-gray-800 rounded hover:border-gray-600">
 
                 <a href="advert">
                     Create New Ad
@@ -89,7 +89,7 @@
                                     </a>
                                 </td>
 
-                                
+
                             </tr>
                             @endforeach
                             @else
