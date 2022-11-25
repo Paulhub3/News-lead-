@@ -89,7 +89,7 @@
 
                         <label class="block cursor-pointer ml-52 mt-1">
                             <div>
-                                 Or image
+                                Or image
                             </div>
                         </label>
                     </div>
