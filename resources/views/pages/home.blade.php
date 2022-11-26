@@ -89,7 +89,7 @@
                 <div class="relative h-72 md:h-96 w-full">
 
                     <div>
-                        <img src="public/uploads/{{$post->image}}"
+                        <img src="{{$post->image}}"
                             class="w-full h-72 md:h-96 absolute overflow-hidden bg-no-repeat object-cover" />
                     </div>
 

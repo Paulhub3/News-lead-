@@ -45,7 +45,6 @@ class PostController extends Controller
         if ($request->file('image')) {
             $file = $request->file('image');
             $filename = date('YmdHi') . $file->getClientOriginalName();
-            $file->move(public_path('uploads'), $filename);
             $posts['image'] = $filename;
         }
 
