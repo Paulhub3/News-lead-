@@ -57,7 +57,7 @@
                     class="grid grid-cols-1 gap-8 px-2 md:flex md:space-x-3 md:px-6  border-b border-b-gray-200 py-4 md:h-52 mb-6">
 
                     <div class="mx-auto md:mx-0">
-                        <img src="/uploads/{{$render->image}}" class="w-96  h-36 object-cover" />
+                        <img :src="/uploads/{{$render->image}}" class="w-96  h-36 object-cover" />
                     </div>
 
                     <div class="mt-1 mx-auto md:mx-0">
