@@ -57,7 +57,7 @@
                     class="grid grid-cols-1 gap-8 px-2 md:flex md:space-x-3 md:px-6  border-b border-b-gray-200 py-4 md:h-52 mb-6">
 
                     <div class="mx-auto md:mx-0">
-                        <img :src="/uploads/{{$render->image}}" class="w-96  h-36 object-cover" />
+                        <img src="/uploads/{{$render->image}}" class="w-96  h-36 object-cover" />
                     </div>
 
                     <div class="mt-1 mx-auto md:mx-0">
@@ -85,11 +85,11 @@
         <div class="w-full grid grid-cols-1 gap-6 md:gap-4 mb-12">
             @foreach ($posts as $post)
 
-            <a href="blog/{{ $post->id }}">
+            <a href="blog/{{ $post->id }}{{$post->categories}}">
                 <div class="relative h-72 md:h-96 w-full">
 
                     <div>
-                        <img src="/uploads/{{$post->image}}"
+                        <img src="public/uploads/{{$post->image}}"
                             class="w-full h-72 md:h-96 absolute overflow-hidden bg-no-repeat object-cover" />
                     </div>
 
