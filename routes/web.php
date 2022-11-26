@@ -283,6 +283,25 @@ Route::get('/watch-tv', function () {
 });
 
 
+Route::get('/blog/{post}', function (Post $post) {
+
+
+    $post = Post::find($post);
+    $shows = Post::orderBy('created_at', 'desc')->skip(1)->take(4)->get();
+    $recents = Post::orderBy('created_at', 'desc')->skip(4)->take(4)->get();
+    $adverts = Advert::where('page', 'Reading-page')->latest()->limit(2)->get();
+
+    return view('pages.reading-page', [
+
+        'post' => $post,
+        'shows' => $shows,
+        'recents' => $recents,
+        'adverts' => $adverts,
+
+    ]);
+});
+
+
 
 
 /** Admin Dashboard Rout With Function */
@@ -321,7 +340,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('delete/{post}', [PostController::class, 'destroy'])->name('post.destroy');
 });
 
-Route::get('blog/{post}', [PostController::class, 'read']);
+//Route::get('blog/{post}', [PostController::class, 'read']);
 
 
 /** TvShow Crud */
