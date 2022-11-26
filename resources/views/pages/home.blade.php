@@ -85,7 +85,7 @@
         <div class="w-full grid grid-cols-1 gap-6 md:gap-4 mb-12">
             @foreach ($posts as $post)
 
-            <a href="blog/{{ $post->id }}/{{$post->categories}}">
+            <a href="blog/{{ $post->id }}">
                 <div class="relative h-72 md:h-96 w-full">
 
                     <div>
