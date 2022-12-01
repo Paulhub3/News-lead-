@@ -229,6 +229,13 @@
 
                         <div class="flex flex-col space-y-2">
                             <!-- GRID BOX 8 -->
+
+                            <div class="flex ">
+                                <a href="/health">
+                                    <h1 class="text-white text-lg md:text-2xl font-sans font-bold">Health</h1>
+                                </a>
+                            </div>
+
                             <div class="flex ">
                                 <a href="/insecurity">
                                     <h1 class="text-white text-lg md:text-2xl font-sans font-bold">Insecurity</h1>
@@ -257,8 +264,14 @@
                                 </div>
 
                                 <div>
-                                    <a href="/contact-us" class="text-white text-base font-normal">
+                                    <a href="/advertise" class="text-white text-base font-normal">
                                         Advertise With Us
+                                    </a>
+                                </div>
+
+                                <div>
+                                    <a href="/about-us" class="text-white text-base font-normal">
+                                       About Us
                                     </a>
                                 </div>
 

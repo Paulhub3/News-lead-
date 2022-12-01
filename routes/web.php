@@ -25,11 +25,53 @@ use App\Http\Controllers\ProfileController;
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/about-us', function () {
-    return view('pages.about');
+
+    $renders = Post::orderBy('created_at', 'desc')->skip(5)->take(4)->get();
+
+    //Right Side Advert
+    $adverts = Advert::where('page', 'Home-page')->latest()->limit(2)->get();
+
+
+    return view('pages.about', [
+
+        'renders' => $renders,
+        'adverts' => $adverts,
+
+    ]);
 });
 
+Route::get('/privacy', function () {
+
+    return view('pages.privacy');
+});
+
+
+Route::get('/terms', function () {
+
+    return view('pages.terms');
+});
+
+Route::get('/advertise', function () {
+
+    return view('pages.advertise');
+});
+
+
+
 Route::get('/contact-us', function () {
-    return view('pages.contact-us');
+
+    $renders = Post::orderBy('created_at', 'desc')->skip(5)->take(4)->get();
+
+    //Right Side Advert
+    $adverts = Advert::where('page', 'Home-page')->latest()->limit(2)->get();
+
+
+    return view('pages.contact-us', [
+
+        'renders' => $renders,
+        'adverts' => $adverts,
+
+    ]);
 });
 
 Route::get('/search', function (Request $request) {
@@ -48,6 +90,29 @@ Route::get('/search', function (Request $request) {
     return view('pages.search', compact('posts'));
 })->name('search');
 
+
+//Health News
+Route::get('/health', function () {
+
+    $posts = Post::where('categories', 'Health')->latest()->limit(1)->get();
+
+    $shows = Post::where('categories', 'Health')->orderBy('created_at', 'desc')->skip(1)->take(4)->get();
+
+    $renders = Post::where('categories', 'Health')->orderBy('created_at', 'desc')->skip(5)->take(20)->get();
+
+    //Right Side Advert
+    $adverts = Advert::where('page', 'Home-page')->latest()->limit(2)->get();
+
+
+    return view('pages.health', [
+
+        'posts' => $posts,
+        'shows' => $shows,
+        'renders' => $renders,
+        'adverts' => $adverts,
+
+    ]);
+});
 
 //Foreign News
 Route::get('/foreign-news', function () {

@@ -27,51 +27,8 @@
             </h3>
         </div>
 
-        <div class=" flex space-x-4">
-
-            <div class="">
-
-                <button>
-
-                    <a href="https://www.facebook.com/sharer.php?u=https://easternleadexpress.ng/blog/" target="_blank">
-
-                        <img src="/icons/icons8-facebook.png" class="w-12" alt="icons">
-
-                    </a>
-
-                </button>
-
-            </div>
-
-            <div class="">
-
-                <button>
-
-                    <a href="https://twitter.com/share?url=https://easternleadexpress.ng/blog/" target="_blank">
-
-                        <img src="/icons/free-twitter-logo.png" class="w-12" alt="icons">
-
-                    </a>
-
-                </button>
-
-            </div>
-
-            <div class="">
-
-                <button>
-                    <a  href="https://api.whatsapp.com/send?text=https://easternleadexpress.ng/blog" target="_blank">
-
-                        <img src="/icons/icons8-whatsapp.png" class="w-12" alt="icons">
-
-                    </a>
-
-                </button>
-
-            </div>
-
-
-
+        <div class="">
+          {!! $shareComponent !!}
         </div>
 
     </div>

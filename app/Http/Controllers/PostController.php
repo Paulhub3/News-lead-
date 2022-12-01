@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Advert;
 use Illuminate\Http\Request;
+use Jorenvh\Share\Share;
 
 
 class PostController extends Controller
@@ -67,12 +68,20 @@ class PostController extends Controller
         $recents = Post::orderBy('created_at', 'desc')->skip(4)->take(4)->get();
         $adverts = Advert::where('page', 'Reading-page')->latest()->limit(2)->get();
 
+        $shareComponent = \Share::page(
+            'https://easternleadexpress.ng/',
+            'Leading The People ... Moulding Opinions',
+
+        )->facebook()->twitter()->linkedin()->telegram()->whatsapp()->reddit();
+
         return view('pages.reading-page', [
 
             'post' => $post,
             'shows' => $shows,
             'recents' => $recents,
             'adverts' => $adverts,
+
+            'shareComponent' => $shareComponent,
 
         ]);
     }

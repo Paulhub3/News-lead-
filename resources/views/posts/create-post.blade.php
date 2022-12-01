@@ -68,7 +68,8 @@
                         <option value="Foreign news">Foreign news</option>
                         <option value="Politics">Politics</option>
                         <option value="Economy">Economy</option>
-                        <option value="War">War</option>
+                        <option value="News">News</option>
+                        <option value="Health">Health</option>
                         <option value="Entertainment">Entertainment</option>
                         <option value="Sports">Sports</option>
                         <option value="Crime watch">Crime watch</option>
@@ -84,23 +85,23 @@
                 </div>
 
                 <div class="mb-4">
-                    <div class="w-80 md:w-full p-12 cursor-pointer bg-white border-dotted border-2 border-gray-800">
-                        <input type="file"  name="image" id="image" accept="image/*" class="cursor-pointer overflow-hidden  absolute" required>
+                    <div class="w-full  p-12 cursor-pointer bg-white border-dotted border-2 border-gray-800">
+                        <input type="file" name="image" id="image" accept="image/*" class="cursor-pointer overflow-hidden  absolute"
+                            required>
 
-                        <label class="block cursor-pointer ml-52 mt-1">
+                        <label class="block cursor-pointer ml-28 md:ml-52 mt-1">
                             <div>
-                                 Or image
+                                Or image
                             </div>
                         </label>
                     </div>
 
-                   <div>
+                    <div>
                         @error('image')
-                            <span class="text-red-700 text-lg font-sans">{{ $message }}</span>
+                        <span class="text-red-700 text-lg font-sans">{{ $message }}</span>
                         @enderror
-                   </div>
+                    </div>
                 </div>
-
 
 
                 <div class="flex justify-center">

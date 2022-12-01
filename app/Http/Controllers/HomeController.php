@@ -34,7 +34,7 @@ class HomeController extends Controller
         //Right Side Advert
         $adverts = Advert::where('page', 'Home-page')->latest()->limit(2)->get();
 
-        $exclusiveNews = Post::where('categories', 'War')->latest()->limit(6)->get();
+        $exclusiveNews = Post::where('categories', 'News')->latest()->limit(6)->get();
 
         return view('pages.home', [
 

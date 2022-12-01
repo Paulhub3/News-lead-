@@ -10,15 +10,32 @@
 <!-- Fonts -->
 <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="/icon.png">
 
 <!-- Scripts -->
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-<meta property="og:title" content="Eastern Lead Express">
-<meta property="og:url" content="https://easternleadexpress.ng/">
-<meta property="og:description" content="Leading The People ... Moulding Opinions.">
-<meta property="og:image" content="">
+<style>
+    div#social-links {
+        margin: 0 auto;
+        max-width: 500px;
+        margin-top: 6%;
+    }
 
-<meta name="twitter:card" content="summary_large_image">
+    div#social-links ul li {
+        display: inline-block;
+    }
+
+    div#social-links ul li a {
+        padding: 17px;
+        border: 1px solid #ccc;
+        margin: 1px;
+        font-size: 30px;
+        color: #222;
+        background-color: #ccc;
+    }
+</style>

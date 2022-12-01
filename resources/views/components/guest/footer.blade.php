@@ -3,17 +3,20 @@
     <div class="bg-[rgba(0,51,102,.99)] py-6 px-4">
 
         <!-- FLEX JUSTIFY BETWEEN -->
-        <div class="container mx-auto flex justify-between ">
+        <div class="container  mx-auto md:flex flex flex-col md:flex-row md:justify-between ">
 
-            <div class="space-y-3">
-                <div class="py-2 px-2 w-32 md:w-52 bg-white rounded-md">
+            <div class="flex space-x-2 mb-4 md:mb-0">
+
+                <div class="py-2 px-2 w-32 h-14 md:h-20 md:w-52 bg-white rounded-md">
                     <a to="/">
-                        <img src="/images/logo.png" class="w-32 lg:w-52" alt="logo">
+                        <img src="/images/logo.png" class="w-32 h-9 lg:h-14 lg:w-52" alt="logo">
                     </a>
                 </div>
-                <div>
+
+                <div class="md:mt-6 lg:mt-12">
                     <h3 class="text-[yellow] text-lg font-sans">Leading The People ... Moulding Opinions.</h3>
                 </div>
+
             </div>
 
             <div class="flex space-x-4">
@@ -59,48 +62,30 @@
     <div class="bg-[#00284d] py-4 px-4">
 
         <!-- FLEX JUSTIFY BETWEEN -->
-        <div class="container mx-auto flex flex-col-reverse mt-6 lg:flex lg:flex-row lg:justify-between">
+        <div class="container mx-auto flex flex-col-reverse justify-center mt-6 lg:flex lg:flex-row lg:justify-between">
             <div>
-                <a href="/" class="text-white text-lg font-medium font-sans">
+                <a href="/" class="text-white text-lg text-center font-medium font-sans">
                     Copyright © Eastern Lead Express
                 </a>
             </div>
 
             <!-- SECOND DIV -->
-            <div class="grid grid-cols-2 gap-4 mb-6 lg:mb-0  md:flex md:flex-row md:space-x-6">
+            <div class=" flex flex-col justify-center items-center mb-6 lg:mb-0  md:flex md:flex-row md:space-x-6">
 
                 <div>
-                    <a href="/about-us" class="text-white text-lg font-medium font-sans">
-                        About
+                    <a href="/privacy" class="text-white text-lg text-center font-medium font-sans">
+                        Privacy Policy
                     </a>
                 </div>
 
                 <div>
-                    <a href="/imo-politics" class="text-white text-lg font-medium font-sans">
-                        Imo Politics
+                    <a href="/terms" class="text-white text-lg text-center font-medium font-sans">
+                        Terms & Condition
                     </a>
                 </div>
 
                 <div>
-                    <a href="/economy" class="text-white text-lg font-medium font-sans">
-                        Economy
-                    </a>
-                </div>
-
-                <div>
-                    <a href="/entertainment" class="text-white text-lg font-medium font-sans">
-                        Entertainment
-                    </a>
-                </div>
-
-                <div>
-                    <a href="/sport" class="text-white text-lg font-medium font-sans">
-                        Sports
-                    </a>
-                </div>
-
-                <div>
-                    <a href="/contact-us" class="text-white text-lg font-medium font-sans">
+                    <a href="/advertise" class="text-white text-lg v font-medium font-sans">
                         Advertise With Us
                     </a>
                 </div>
