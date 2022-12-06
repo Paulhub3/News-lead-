@@ -30,18 +30,25 @@ class PostController extends Controller
 
             'title' => ['required', 'min:5',],
             'description' => ['required', 'min:5',],
-            'body' => ['required', 'min:5',],
+            'artical_one' => ['required', 'min:5',],
             'categories' => ['required',  'max:255'],
             'date' => ['required'],
             'image' => 'required',
+
         ]);
 
         $posts = new Post;
         $posts->title = $request->title;
         $posts->description = $request->description;
-        $posts->body = $request->body;
+        $posts->artical_one = $request->artical_one;
+        $posts->artical_two = $request->artical_two;
+        $posts->artical_three = $request->artical_three;
+        $posts->artical_fourth = $request->artical_fourth;
+        $posts->artical_fifth = $request->artical_fifth;
         $posts->categories = $request->categories;
         $posts->date =  $request->date;
+        $posts->read_link = $request->read_link;
+        $posts->link_text = $request->link_text;
 
         if ($request->file('image')) {
             $file = $request->file('image');
@@ -89,7 +96,9 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
-        return view('posts.edit', compact('post'));
+        return view('posts.edit', [
+            'post' => $post,
+        ]);
     }
 
     public function update(Request $request, $id)
@@ -98,18 +107,22 @@ class PostController extends Controller
         $this->validate($request, [
             'title' => 'required|string|max:255',
             'description' => 'required',
-            'body' => ['required'],
+            'artical_one' => ['required', 'min:5',],
             'date' => ['required'],
             'categories' => ['required'],
         ]);
 
         $post = Post::find($id);
 
-        $post->title = $request->input('title');
-        $post->description = $request->input('description');
-        $post->body = $request->input('body');
+        $post->description = $request->description;
+        $post->artical_one = $request->artical_one;
+        $post->artical_two = $request->artical_two;
+        $post->artical_fourth = $request->artical_fourth;
+        $post->artical_fifth = $request->artical_fifth;
         $post->date = $request->input('date');
         $post->categories = $request->input('categories');
+        $post->read_link = $request->input('read_link');
+        $post->link_text = $request->input('link_text');
 
         $post->update();
 

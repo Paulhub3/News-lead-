@@ -11,10 +11,16 @@ class Post extends Model
     protected $fillable = [
         'title',
         'description',
-        'body',
+        'artical_one',
+        'artical_two',
+        'artical_three',
+        'artical_fourth',
+        'artical_fifth',
         'categories',
         'date',
         'author',
         'image',
+        'read_link',
+        'link_text',
     ];
 }

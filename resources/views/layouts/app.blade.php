@@ -14,7 +14,7 @@
         <link rel="icon" type="image/x-icon" href="/icon.png">
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+       @vite(['resources/css/app.css', '../path/to/flowbite/dist/flowbite.js', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">

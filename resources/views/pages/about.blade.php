@@ -45,7 +45,7 @@
                             <!-- SUB DIV 1 -->
                             <div>
 
-                                <a href="blog/{{ $render->id }}{{ $render->categories }}"
+                                <a href="blog/{{ $render->id }}{{ $render->title }}"
                                     class="grid grid-cols-2 gap-4 h-52 md:grid md:justify-center md:items-center px-4 border-b border-b-gray-200 md:px-36 lg:px-0">
 
                                     <div class="mt-6 md:mt-0">

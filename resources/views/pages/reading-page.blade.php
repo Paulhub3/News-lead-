@@ -27,8 +27,51 @@
             </h3>
         </div>
 
-        <div class="">
-          {!! $shareComponent !!}
+        <div class=" flex space-x-4">
+
+            <div class="">
+
+                <button>
+
+                    <a href="https://www.facebook.com/sharer.php?u=https://easternleadexpress.ng/blog/" target="_blank">
+
+                        <img src="/icons/icons8-facebook.png" class="w-12" alt="icons">
+
+                    </a>
+
+                </button>
+
+            </div>
+
+            <div class="">
+
+                <button>
+
+                    <a href="https://twitter.com/share?url=https://easternleadexpress.ng/blog/" target="_blank">
+
+                        <img src="/icons/free-twitter-logo.png" class="w-12" alt="icons">
+
+                    </a>
+
+                </button>
+
+            </div>
+
+            <div class="">
+
+                <button>
+                    <a  href="https://api.whatsapp.com/send?text=https://easternleadexpress.ng/blog" target="_blank">
+
+                        <img src="/icons/icons8-whatsapp.png" class="w-12" alt="icons">
+
+                    </a>
+
+                </button>
+
+            </div>
+
+
+
         </div>
 
     </div>
@@ -64,10 +107,41 @@
                                 {{ $posts->description }}
                             </p>
 
+                        </div>
+
+                        <div class="px-6 space-y-4 mt-5">
+
                             <p class="text-gray-800 font-sans text-sm md:text-base md:font-semibold">
-                                {{ $posts->body }}
+                                {{ $posts->artical_one }}
                             </p>
 
+                            <p class="text-gray-800 font-sans text-sm md:text-base md:font-semibold">
+                                {{ $posts->artical_two }}
+                            </p>
+
+                            <p class="text-gray-800 font-sans text-sm md:text-base md:font-semibold">
+                                {{ $posts->artical_three }}
+                            </p>
+
+                            <p class="text-gray-800 font-sans text-sm md:text-base md:font-semibold">
+                                {{ $posts->artical_fourth }}
+                            </p>
+
+                            <p class="text-gray-800 font-sans text-sm md:text-base md:font-semibold">
+                                {{ $posts->artical_fifth }}
+                            </p>
+
+                        </div>
+
+                        <div class="px-6 flex space-x-2">
+
+                            <h2 class="text-gray-800 font-sans text-sm md:text-base md:font-semibold">
+                                Also Read:
+                            </h2>
+
+                            <a class="text-red-600 underline font-sans text-sm md:text-base md:font-semibold" href="{{ $posts->read_link }}">
+                                <h1>{{ $posts->link_text }}</h1>
+                            </a>
                         </div>
                     </div>
                 </div>

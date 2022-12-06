@@ -16,7 +16,7 @@
                     <div class="w-full grid grid-cols-1 gap-6 md:gap-4 mb-12">
 
                         @foreach ($posts as $post)
-                        <a href="blog/{{ $post->id }}{{ $post->categories }}">
+                        <a href="blog/{{ $post->id }}{{ $post->title }}">
 
                             <div class="relative h-72 md:h-96 w-full">
 
@@ -63,7 +63,7 @@
                     @foreach ($shows as $show)
                     <div class="grid grid-cols-1 gap-5 px-4">
 
-                        <a href="blog/{{ $show->id }}{{ $show->categories }}">
+                        <a href="blog/{{ $show->id }}{{ $show->title }}">
 
                             <div class="relative h-40">
 
@@ -109,7 +109,7 @@
                     @foreach ($renders as $render)
                     <div>
 
-                        <a href="blog/{{ $render->id }}{{ $render->categories }}"
+                        <a href="blog/{{ $render->id }}{{ $render->title }}"
                             class="grid grid-cols-1 gap-8 px-2 md:flex md:space-x-3 md:px-6  border-b border-b-gray-200 py-4 md:h-52 mb-6">
 
                             <div class="md:mt-2">
@@ -122,7 +122,7 @@
 
                                     <h2
                                         class="text-[#477baffc] text-xs hover:underline uppercase font-sans font-bold text-justify">
-                                        {{ $render->categories }}
+                                        {{ $render->title }}
                                     </h2>
 
                                     <h3 class="text-xs text-gray-500 font-sans font-bold text-justify">
@@ -174,7 +174,7 @@
                             <!-- SUB DIV 1 -->
                             <div>
 
-                                <a href="blog/{{ $show->id }}{{ $show->categories }}"
+                                <a href="blog/{{ $show->id }}{{ $show->title }}"
                                     class="grid grid-cols-2 gap-4 h-52 md:grid md:justify-center md:items-center px-4 border-b border-b-gray-200 md:px-36 lg:px-0">
 
                                     <div class="mt-6 md:mt-0">
