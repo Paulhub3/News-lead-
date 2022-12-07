@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Advert;
 use Illuminate\Http\Request;
-use Jorenvh\Share\Share;
 
 
 class PostController extends Controller
@@ -43,8 +42,13 @@ class PostController extends Controller
         $posts->artical_one = $request->artical_one;
         $posts->artical_two = $request->artical_two;
         $posts->artical_three = $request->artical_three;
-        $posts->artical_fourth = $request->artical_fourth;
-        $posts->artical_fifth = $request->artical_fifth;
+        $posts->artical_four = $request->artical_four;
+        $posts->artical_five = $request->artical_five;
+        $posts->artical_six= $request->artical_six;
+        $posts->artical_seven = $request->artical_seven;
+        $posts->artical_eight = $request->artical_eight;
+        $posts->artical_nine = $request->artical_nine;
+        $posts->artical_ten = $request->artical_ten;
         $posts->categories = $request->categories;
         $posts->date =  $request->date;
         $posts->read_link = $request->read_link;
@@ -75,11 +79,7 @@ class PostController extends Controller
         $recents = Post::orderBy('created_at', 'desc')->skip(4)->take(4)->get();
         $adverts = Advert::where('page', 'Reading-page')->latest()->limit(2)->get();
 
-        $shareComponent = \Share::page(
-            'https://easternleadexpress.ng/',
-            'Leading The People ... Moulding Opinions',
-
-        )->facebook()->twitter()->linkedin()->telegram()->whatsapp()->reddit();
+        $shareComponent =  (new \Jorenvh\Share\Share)->currentPage()->facebook()->twitter()->whatsapp();
 
         return view('pages.reading-page', [
 
@@ -114,11 +114,18 @@ class PostController extends Controller
 
         $post = Post::find($id);
 
+        $post->title = $request->title;
         $post->description = $request->description;
         $post->artical_one = $request->artical_one;
         $post->artical_two = $request->artical_two;
-        $post->artical_fourth = $request->artical_fourth;
-        $post->artical_fifth = $request->artical_fifth;
+        $post->artical_three = $request->artical_three;
+        $post->artical_four = $request->artical_four;
+        $post->artical_five = $request->artical_five;
+        $post->artical_one = $request->artical_six;
+        $post->artical_two = $request->artical_seven;
+        $post->artical_three = $request->artical_eight;
+        $post->artical_four = $request->artical_nine;
+        $post->artical_five = $request->artical_ten;
         $post->date = $request->input('date');
         $post->categories = $request->input('categories');
         $post->read_link = $request->input('read_link');

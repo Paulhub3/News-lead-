@@ -4,6 +4,9 @@ use App\Models\Post;
 use App\Models\Advert;
 use App\Models\Tvshow;
 use Illuminate\Http\Request;
+use Spatie\Analytics\Analytics;
+use Spatie\Analytics\AnalyticsClientFactory;
+use Spatie\Analytics\Period;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
@@ -21,6 +24,32 @@ use App\Http\Controllers\ProfileController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+/** Admin Dashboard Rout With Function */
+
+Route::get('/dashboard', function () {
+
+    $analyticsConfig = config('analytics');
+    $client = AnalyticsClientFactory::createForConfig($analyticsConfig);
+    $analytic = new Analytics($client, $analyticsConfig['view_id']);
+    $analyticsData = $analytic->fetchVisitorsAndPageViews(Period::days(7));
+
+    $posts = Post::count();
+
+    $adverts = Advert::count();
+
+    $tvshows = Tvshow::count();
+
+    return view('dashboard', [
+        'posts'  =>  $posts,
+        'adverts' => $adverts,
+        'tvshows' => $tvshows,
+        'analyticsData' => $analyticsData
+
+    ]);
+})->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -346,25 +375,6 @@ Route::get('/watch-tv', function () {
 
     ]);
 });
-
-
-
-
-/** Admin Dashboard Rout With Function */
-
-Route::get('/dashboard', function () {
-
-    $posts = Post::count();
-
-    $adverts = Advert::count();
-
-    $tvshows = Tvshow::count();
-
-    return view('dashboard', compact('posts', 'adverts', 'tvshows'));
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -57,16 +57,57 @@
 
 
                         <!-- Artical 4 -->
-                        <textarea name="artical_fourth" value="{{ old('artical_fourth') }}" id=""
+                        <textarea name="artical_four" value="{{ old('artical_four') }}" id=""
                             placeholder="Write Post Fourth Paragraph..."
                             class="border-2 border-gray-600 py-3 px-6 w-full  rounded focus:outline-none focus:border-sky-500 focus:ring-sky-500  sm:text-sm focus:ring-0"
-                            cols="10" rows="8" autocomplete="artical_fourth">{{ $post->artical_fourth }}</textarea>
+                            cols="10" rows="8" autocomplete="artical_four">{{ $post->artical_four }}</textarea>
 
 
                         <!-- Artical 5 -->
-                        <textarea name="artical_fifth" value="{{ old('artical_fifth') }}" id="" placeholder="Write Post fifth Paragraph..."
+                        <textarea name="artical_five" value="{{ old('artical_five') }}" id="" placeholder="Write Post fifth Paragraph..."
                             class="border-2 border-gray-600 py-3 px-6 w-full  rounded focus:outline-none focus:border-sky-500 focus:ring-sky-500  sm:text-sm focus:ring-0"
-                            cols="10" rows="8" autocomplete="artical_fifth">{{ $post->artical_fifth }}</textarea>
+                            cols="10" rows="8" autocomplete="artical_five">{{ $post->artical_five }}</textarea>
+
+                        <div x-data="{ show: false }">
+
+                            <a @click="show = !show" :aria-expanded="show ? 'true' : 'false'" :class="{ 'active': show }">
+                                <p class="py-2 w-48 px-3 border-2 text-white font-sans bg-sky-800 rounded"
+                                    @click="open = true; event.target.style.display='none';" x-text="'Add More Paragraph'">
+                                </p>
+                            </a>
+
+                            <div x-show="show" class="mt-4 space-y-4 md:space-y-2">
+                                <!-- Artical 6 -->
+                                <textarea name="artical_six" value="{{ old('artical_six') }}" id=""
+                                    placeholder="Write Post on sixth Paragraph..."
+                                    class="border-2 border-gray-600 py-3 px-6 w-full  rounded focus:outline-none focus:border-sky-500 focus:ring-sky-500  sm:text-sm focus:ring-0"
+                                    cols="10" rows="8" autofocus autocomplete="artical_six">{{ $post->artical_six }}</textarea>
+
+                                <!-- Artical 7 -->
+                                <textarea name="artical_seven" value="{{ old('artical_seven') }}" id=""
+                                    placeholder="Write Post on seventh Paragraph..."
+                                    class="border-2 border-gray-600 py-3 px-6 w-full  rounded focus:outline-none focus:border-sky-500 focus:ring-sky-500  sm:text-sm focus:ring-0"
+                                    cols="10" rows="8" autofocus autocomplete="artical_seven">{{ $post->artical_seven }}</textarea>
+
+                                <!-- Artical 8 -->
+                                <textarea name="artical_eight" value="{{ old('artical_eight') }}" id=""
+                                    placeholder="Write Post on eight Paragraph..."
+                                    class="border-2 border-gray-600 py-3 px-6 w-full  rounded focus:outline-none focus:border-sky-500 focus:ring-sky-500  sm:text-sm focus:ring-0"
+                                    cols="10" rows="8" autofocus autocomplete="artical_eight">{{ $post->artical_eight }}</textarea>
+
+                                <!-- Artical 9 -->
+                                <textarea name="artical_nine" value="{{ old('artical_nine') }}" id=""
+                                    placeholder="Write Post on ninth Paragraph..."
+                                    class="border-2 border-gray-600 py-3 px-6 w-full  rounded focus:outline-none focus:border-sky-500 focus:ring-sky-500  sm:text-sm focus:ring-0"
+                                    cols="10" rows="8" autofocus autocomplete="artical_nine">{{ $post->artical_nine }}</textarea>
+
+                                <!-- Artical 10 -->
+                                <textarea name="artical_ten" value="{{ old('artical_ten') }}" id=""
+                                    placeholder="Write Post on last Paragraph..."
+                                    class="border-2 border-gray-600 py-3 px-6 w-full  rounded focus:outline-none focus:border-sky-500 focus:ring-sky-500  sm:text-sm focus:ring-0"
+                                    cols="10" rows="8" autofocus autocomplete="artical_ten">{{ $post->artical_ten }}</textarea>
+                            </div>
+                        </div>
 
                     </div>
 

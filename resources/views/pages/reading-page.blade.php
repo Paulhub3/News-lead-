@@ -27,49 +27,20 @@
             </h3>
         </div>
 
-        <div class=" flex space-x-4">
+
+        <div class="lg:w-9/12 flex justify-between px-6">
 
             <div class="">
-
-                <button>
-
-                    <a href="https://www.facebook.com/sharer.php?u=https://easternleadexpress.ng/blog/" target="_blank">
-
-                        <img src="/icons/icons8-facebook.png" class="w-12" alt="icons">
-
-                    </a>
-
-                </button>
-
+                <h3 class="text-gray-800 font-sans font-bold">
+                    By <span class=" text-[rgba(0,51,102,.99)]">{{ $posts->author }}</span>
+                </h3>
             </div>
 
             <div class="">
-
-                <button>
-
-                    <a href="https://twitter.com/share?url=https://easternleadexpress.ng/blog/" target="_blank">
-
-                        <img src="/icons/free-twitter-logo.png" class="w-12" alt="icons">
-
-                    </a>
-
-                </button>
-
+                {!! $shareComponent !!}
             </div>
 
-            <div class="">
-
-                <button>
-                    <a  href="https://api.whatsapp.com/send?text=https://easternleadexpress.ng/blog" target="_blank">
-
-                        <img src="/icons/icons8-whatsapp.png" class="w-12" alt="icons">
-
-                    </a>
-
-                </button>
-
-            </div>
-
+        </div>
 
 
         </div>
@@ -124,11 +95,31 @@
                             </p>
 
                             <p class="text-gray-800 font-sans text-sm md:text-base md:font-semibold">
-                                {{ $posts->artical_fourth }}
+                                {{ $posts->artical_four }}
                             </p>
 
                             <p class="text-gray-800 font-sans text-sm md:text-base md:font-semibold">
-                                {{ $posts->artical_fifth }}
+                                {{ $posts->artical_five }}
+                            </p>
+
+                            <p class="text-gray-800 font-sans text-sm md:text-base md:font-semibold">
+                                {{ $posts->artical_six }}
+                            </p>
+
+                            <p class="text-gray-800 font-sans text-sm md:text-base md:font-semibold">
+                                {{ $posts->artical_seven }}
+                            </p>
+
+                            <p class="text-gray-800 font-sans text-sm md:text-base md:font-semibold">
+                                {{ $posts->artical_eight }}
+                            </p>
+
+                            <p class="text-gray-800 font-sans text-sm md:text-base md:font-semibold">
+                                {{ $posts->artical_nine }}
+                            </p>
+
+                            <p class="text-gray-800 font-sans text-sm md:text-base md:font-semibold">
+                                {{ $posts->artical_ten }}
                             </p>
 
                         </div>
